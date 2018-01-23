@@ -1,7 +1,56 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <!-- 基本信息 -->
+  <description>Spring cloud 多模块构建源项目</description>
   <modelVersion>4.0.0</modelVersion>
+   <name>architect-spring-cloud-master</name>
+    <!-- 项目说明：这里作为聚合工程的父工程 -->
   <groupId>org.com.itmuch.cloud</groupId>
   <artifactId>architect-spring-cloud-master</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  
+  
+  
+  
+ <!--包含的子模块 -->
+   <modules>
+  	<module>cloud-microservice-provider-user</module>
+  </modules>
+ 
+   <!-- 使用spring-boot版本 1.5.9.RELEASE-->
+  <parent>
+     <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.9.RELEASE</version>
+   </parent>
+
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  <java.version>1.8</java.version>
+  </properties>
+  
+<!-- 版本说明：这里统一管理依赖的版本号,并不实现引入 -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>Dalston.SR5</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
+<!-- 项目打包插件  -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>
