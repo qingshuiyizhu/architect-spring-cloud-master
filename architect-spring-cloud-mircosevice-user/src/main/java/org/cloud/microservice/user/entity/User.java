@@ -2,11 +2,15 @@ package org.cloud.microservice.user.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import org.cloud.mircoservice.common.entity.IdEntity;
 
+@Table(name = "USER")
+@Entity
 public class User extends IdEntity implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+ 	private static final long serialVersionUID = 1L;
 	// 用户名
 	private String userName;
 	// 用户密码

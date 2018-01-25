@@ -9,8 +9,7 @@
   </parent>
   <groupId>org.com.itmuch.cloud.user</groupId>
   <artifactId>architect-spring-cloud-mircosevice-user</artifactId>
- 
-  <name>architect-spring-cloud-mircosevice-user</name>
+   <name>architect-spring-cloud-mircosevice-user</name>
   <url>http://maven.apache.org</url>
  
   <dependencies>
@@ -19,4 +18,30 @@
       <artifactId>architect-spring-cloud-mircosevice-common</artifactId>
     </dependency>
   </dependencies>
+  
+  <!-- 项目打包插件  -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+     <configuration>
+     <!-- 指定该Main Class为全局的唯一入口 -->
+     <mainClass>org.cloud.mircoservice.user.Application</mainClass>
+	<executions>
+		<execution>
+			<goals>
+				<goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+			</goals>
+			 <!--可以生成不含依赖包的不可执行Jar包-->
+                        <!-- configuration>
+                          <classifier>exec</classifier>
+                        </configuration> -->
+		</execution>
+	</executions> 
+       </configuration>
+       </plugin>
+    </plugins>
+  </build>
+   
 </project>
