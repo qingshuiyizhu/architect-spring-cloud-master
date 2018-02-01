@@ -2,6 +2,8 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+  
+   <url>http://maven.apache.org</url>
   <parent>
     <groupId>org.com.itmuch.cloud</groupId>
     <artifactId>architect-spring-cloud-master</artifactId>
@@ -9,13 +11,8 @@
   </parent>
  
   <artifactId>architect-private-demo</artifactId>
-  
   <name>architect-private-demo</name>
-  <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <dependencies>
+   <dependencies>
      
   </dependencies>
 </project>

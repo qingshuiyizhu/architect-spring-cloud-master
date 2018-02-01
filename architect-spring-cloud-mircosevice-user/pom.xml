@@ -7,10 +7,10 @@
     <artifactId>architect-spring-cloud-master</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>org.com.itmuch.cloud.user</groupId>
+ 
   <artifactId>architect-spring-cloud-mircosevice-user</artifactId>
    <name>architect-spring-cloud-mircosevice-user</name>
-  <url>http://maven.apache.org</url>
+   <url>http://maven.apache.org</url>
  
   <dependencies>
     <dependency>
@@ -34,9 +34,9 @@
 				<goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
 			</goals>
 			 <!--可以生成不含依赖包的不可执行Jar包-->
-                        <!-- configuration>
+                 <!--   <configuration>
                           <classifier>exec</classifier>
-                        </configuration> -->
+                    </configuration>  -->
 		</execution>
 	</executions> 
        </configuration>

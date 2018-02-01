@@ -1,0 +1,90 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	min-width: 800px;
+	min-width: 800px !important;
+	min-height: 500px;
+	min-height: 500px !important;
+}
+
+.title {
+	display: none;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/student_main.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.exam {
+	width: 100%;
+	height: 80%;
+	padding-top: 15%;
+	padding-left: 20%;
+	padding-right: 10%;
+	/* 	border: 5px solid #ff0000;  */
+}
+
+.exam h2 {
+	padding-right: 30%;
+}
+
+#exam_content p {
+	font-size: 1.475em;
+	color: blue;
+}
+
+#exam_content ul {
+	list-style: none;
+	font-size: 1.375em;
+	text-align: left;
+	color: black;
+	line-height: 180%;
+	margin-left: 5%;
+}
+
+#exam_content a {
+	text-decoration: none;
+}
+
+#exam_content a:link {color: #000000}              /* 未被访问的链接*/
+#exam_content a:visited {color: #000000}            /* 已被访问过的链接 */
+#exam_content a:hover {color: #ff0000}            /* 鼠标悬浮在上的链接*/
+#exam_content a:active {color: #0000ff}   /* 鼠标选定的链接 */
+
+.rules {
+	font-size: 1.375em;
+	text-align: center;
+	text-align: left;
+	margin-left: 25%;
+}
+
+.exam h2 {
+	text-align: center;
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 2.575em;
+	color: red;
+}
+
+.btns {
+	padding-left: 50%;
+	
+	/* border: 5px solid #ff0000;  */
+}
+.btns button{
+  display: none;	
+}
+.msg span{
+	font-size: 1.375em;
+	color:red;
+}
+.define{
+ display: none;		
+}

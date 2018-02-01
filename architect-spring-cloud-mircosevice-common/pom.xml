@@ -27,10 +27,13 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-    	<dependency>
+    <!-- spring mvc (springboot 默认集成) spring-boot-web依赖即可 -->
+		<dependency>
+			<!-- spring-boot web 组件 -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-	 	</dependency>
+		</dependency>
+ <!--  引入spring data jpa-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>

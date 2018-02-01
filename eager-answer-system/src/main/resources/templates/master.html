@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>主持人</title>
+ <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+<link rel="stylesheet" type="text/css" th:href="@{/js/framework/bootstrap-3.3.7-dist/css/bootstrap.css}" />
+<script type="text/javascript" th:src="@{/js/master.js}"></script>
+<link rel="stylesheet" type="text/css" th:href="@{/css/master.css}"/> 
+<script type="text/javascript">
+//获取当前网址
+curWwwPath = function(){
+	//获取当前网址 
+	var curWwwPath1 = window.document.location.href;
+	return curWwwPath1;
+};
+//获取主机地址之后的目录
+pathName = function(){
+	var pathName = window.document.location.pathname;	
+};
+ 
+ sy = function(){ 
+ //获取当前网址 
+ var curWwwPath = window.document.location.href;
+ //获取主机地址之后的目录
+ var pathName = window.document.location.pathname;
+ var pos = curWwwPath.indexOf(pathName);
+ //获取主机地址
+ var localhostPath = curWwwPath.substring(0,pos);
+ var server = curWwwPath.substring(7,pos)
+ var serverArry = server.split(":");
+ //截取主机名 eg：127.0.0.1 or localhost
+ var serverName = serverArry[0];
+  //截取端口号
+  var serverPort = serverArry[1];
+ //获取带"/"的项目名，如：/myproj
+  var projectName = pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+   //项目真实路径 http://localhost:8083/myproj
+   var realPath=localhostPath+projectName;
+   return (server);
+   
+ //return (localhostPath+projectName);
+};
+
+
+// var username = 
+  path = sy();
+
+</script>
+
+<script th:inline="javascript">  
+//获取session的值
+var username = /*[[${session.username}]]*/ ; 
+
+
+//获取model的值
+
+/*<![CDATA[*/  
+  
+    var username1 = [[${username}]];  
+  // alert(username);
+  
+/*]]>*/  
+</script>
+<style type="text/css">
+.title{
+display:none;
+}
+
+#exam_content h1{
+margin-top:20%;
+
+}
+</style>  
+</head>
+<body>
+   <div class="main">
+		<div class="rank_main">
+			<h2>竞赛排名</h2>
+			<ol id="ranklist">
+
+			</ol>
+			<div class="buts">
+			 	<button id="btn_restart" class="btn btn-primary btn-lg" onclick="send(0)">重新开始</button> 
+			    <button id="btn_begin" class="btn btn-primary btn-lg" onclick="exam_begin()">开始竞赛</button>
+			    <button id="btn_eager" class="btn btn-danger btn-lg" onclick="eager_begin()">开始抢答</button>
+			    <button id="btn_previous" class="btn btn-success btn-lg" onclick="previous()">上一题</button>
+				<button id="btn_next" class="btn btn-danger btn-lg" onclick="next()">下一题</button>
+		 	</div>
+		</div>
+		<div class="exam_content">
+			<h1 class="title">当前竞赛题目</h1>
+			<div id="exam_content">
+			    <h1>请主持人按下开始竞赛按钮</h1>
+		     	<h4>主持人按下开始竞赛按钮，选手方可进行抢答</h4>
+			</div>
+	 	</div>
+	</div>
+</body>
+<script type="text/javascript" th:src="@{/js/framework/bootstrap-3.3.7-dist/js/bootstrap.js}"></script> 
+</html>

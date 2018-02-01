@@ -1,0 +1,18 @@
+.js-remove{
+	
+}
+#btns {
+    font-size: 1.5rem;
+    color: #0000ff;
+}
+#btns > li:hover {
+    cursor: move;
+    color: red;
+}
+
+#btns li i {
+    
+    left: 200px;  
+    position: absolute;
+    font-style: normal; 
+}  
