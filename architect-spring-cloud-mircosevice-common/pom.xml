@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+   <artifactId>architect-spring-cloud-mircosevice-common</artifactId>
+  <name>architect-spring-cloud-mircosevice-common</name>
+  <url>http://maven.apache.org</url>
+  
+   <parent>
+    <groupId>org.com.itmuch.cloud</groupId>
+    <artifactId>architect-spring-cloud-master</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+ 
+  <dependencies>
+      <!-- 数据库连接池 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+	 	</dependency>
+       <!--  <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency> -->
+		<!-- MySql驱动 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+    <!-- spring mvc (springboot 默认集成) spring-boot-web依赖即可 -->
+		<dependency>
+			<!-- spring-boot web 组件 -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+ <!--  引入spring data jpa-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.41</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+	 	</dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,2 @@
+java虚拟机中的字符是Unicode编码，占两个字符，假如一个txt文档内容为abcde是ASCII码，那么每个字符就是一个字节，所以共5个字节。
+注意，class文件中的编码也不是Unicode的，而是utf8的

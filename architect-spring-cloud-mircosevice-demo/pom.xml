@@ -10,8 +10,8 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
  
-  <artifactId>architect-private-demo</artifactId>
-  <name>architect-private-demo</name>
+  <artifactId>architect-spring-cloud-mircosevice-demo</artifactId>
+  <name>architect-spring-cloud-mircosevice-demo</name>
    <dependencies>
      
   </dependencies>

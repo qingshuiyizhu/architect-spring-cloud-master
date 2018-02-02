@@ -1,0 +1,5 @@
+mvn compole 编译
+mvn test 测试
+mvn clean 清空target文件夹
+mvn pachage 打包
+mvn install 安装
