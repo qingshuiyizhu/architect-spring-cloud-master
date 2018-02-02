@@ -1,4 +1,4 @@
-package org.cloud.mircoservice.log;
+package org.cloud.mircoservice.provider.app;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.builder.SpringApplicationBuilder;

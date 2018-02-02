@@ -7,14 +7,68 @@
     <artifactId>architect-spring-cloud-master</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
- 
-  <artifactId>architect-spring-cloud-mircosevice-example</artifactId>
-  
-  <name>architect-spring-cloud-mircosevice-example</name>
+   <artifactId>architect-spring-cloud-mircosevice-example</artifactId>
+   <name>architect-spring-cloud-mircosevice-example</name>
   <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <dependencies>    
+  
+  <dependencies> 
+    <dependency>
+			 <groupId>org.com.itmuch.cloud</groupId>
+             <artifactId>architect-spring-cloud-mircosevice-common</artifactId>
+	</dependency>
+	 <dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+			<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.6</version>
+		</dependency>
+		<!-- 整合模版引擎 Freemarker -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+	
+   <!-- webservice cxf -->
+   <dependency>
+		<groupId>org.apache.cxf</groupId>
+		<artifactId>cxf-rt-frontend-jaxws</artifactId>
+		<version>3.2.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.cxf</groupId>
+		<artifactId>cxf-rt-transports-http</artifactId>
+		<version>3.2.1</version>
+	</dependency> 
+	<!--axis2 begin--> 
+<dependency>
+    <groupId>org.apache.axis2</groupId>
+    <artifactId>axis2</artifactId>
+    <version>1.6.2</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.axis2</groupId>
+    <artifactId>axis2-spring</artifactId>
+    <version>1.6.2</version>
+</dependency>
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+   <artifactId>axis2-transport-http</artifactId>
+    <version>1.6.2</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.axis2</groupId>
+    <artifactId>axis2-transport-local</artifactId>
+    <version>1.6.2</version>
+</dependency>
+<dependency>
+   <groupId>org.apache.axis2</groupId>
+  <artifactId>axis2-xmlbeans</artifactId>
+  <version>1.6.2</version>
+</dependency>
+<!--axis2 end-->    
   </dependencies>
 </project>

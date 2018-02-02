@@ -1,4 +1,4 @@
-package org.cloud.mircoservice.log;
+package org.cloud.microservice.user;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -10,15 +10,12 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
  * @author 
  *
  */
-
-  public class SpringBootStartApplication extends SpringBootServletInitializer {
-
-    private static final Logger logger = LoggerFactory.getLogger(SpringBootStartApplication.class);
-
-    @Override
+ public class SpringBootStartApplication extends SpringBootServletInitializer {
+   private static final Logger logger = LoggerFactory.getLogger(SpringBootStartApplication.class);
+   @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-     	logger.info("以外部的Tomcat容器启动本项目!");
+    	logger.info("以外部的Tomcat容器启动本项目!");
         return builder.sources(Application.class);    
     }
 
-}   
+} 

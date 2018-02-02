@@ -1,0 +1,12 @@
+保证不乱码，需要在读取的时候设置与内容一致的编码格式。
+
+2，获取取文件名乱码解读：
+File.getName() 获取文件名的时候，是根据JDK的默认文件编码进行获取的。要查看JDK中文件的默认编码可以通过Sytem.getProperties().get("file.encoding");进行查看。
+3，解决文件名读取乱码：
+//获取系统的默认编码，把文件名进行重新读取
+
+String fileCode=(String)Sytem.getProperties().get("file.encoding");
+
+String fileName = file.getName();
+
+fileName = new String (fileName.getBytes(fileCode),fileCode);
