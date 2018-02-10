@@ -16,7 +16,8 @@
    	<module>architect-spring-cloud-mircosevice-log</module>
    	<module>architect-spring-cloud-mircosevice-example</module>
   	<module>architect-spring-cloud-mircosevice-user</module>
-  	<module>architect-spring-cloud-mircosevice-shiro</module>
+	<module>architect-spring-cloud-mircosevice-shiro</module>
+  	<module>architect-spring-cloud-mircosevice-serialport</module>
   	<module>eager-answer-system</module>
   	<module>gxg_cloud_service</module>
     </modules>
