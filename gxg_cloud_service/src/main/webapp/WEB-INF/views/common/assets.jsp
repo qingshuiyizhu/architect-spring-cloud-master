@@ -13,9 +13,9 @@
       
     <!-- 可选的Bootstrap主题文件（一般不用引入） -->  
     <!-- <link rel="stylesheet" href="static/framework/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">   -->
- <script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
+ <%-- <script type="text/javascript" src="<%=request.getContextPath()%>/dwr/engine.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/dwr/util.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/dwr/interface/dwrService.js"></script> --%>
 </head>
 <body>
 

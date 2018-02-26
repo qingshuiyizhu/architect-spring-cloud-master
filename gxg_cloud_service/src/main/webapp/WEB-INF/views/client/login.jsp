@@ -15,9 +15,6 @@ function changeCaptchaCode(){
      $("#changeCaptcha").attr("src","captcha/getCaptchaCode");
 }
 
-
-
-
 //验证输入的验证码  
 $(document).ready(function(){
 	  $("#submit").click(function(){

@@ -59,12 +59,12 @@ function loadTableData(){
 	            title: '操作',
 	            align:'center',
 	            formatter:function(value,row){
-	              	str = '<button type="button" class="btn btn-success" onclick="systemOrder('+row.id+','+row.heartbeat+',\'addvoice\')">音量+</button>';
-	                str +='<button type="button" class="btn btn-info"  onclick="systemOrder('+row.id+','+row.heartbeat+',\'lessvoice\')">音量-</button>';
-	            	str +='<button type="button" class="btn btn-danger" onclick="systemOrder('+row.id+','+row.heartbeat+',\'quietvoice\')">静音</button>';
-	            	str +='<button type="button" class="btn btn-primary"  onclick="systemOrder('+row.id+','+row.heartbeat+',\'restart\')">重启</button>';
-	            	str +='<button type="button" class="btn btn-danger"  onclick="systemOrder('+row.id+','+row.heartbeat+',\'shutdown\')">关机</button>';
-	            	str +='<button type="button" class="btn btn-danger"  onclick="systemOrder('+row.id+','+row.heartbeat+',\'destroy\')">退出</button>';  
+	              	str = '<button type="button" class="btn1 btn btn-success btn-lg" onclick="systemOrder('+row.id+','+row.heartbeat+',\'addvoice\')">音量+</button>';
+	             	str +='<button type="button" class="btn1 btn btn-danger btn-lg" onclick="systemOrder('+row.id+','+row.heartbeat+',\'quietvoice\')">静音</button>';
+	            	str +='<button type="button" class="btn1 btn btn-info btn-lg"  onclick="systemOrder('+row.id+','+row.heartbeat+',\'lessvoice\')">音量-</button>';
+	            	str +='<button type="button" class="btn1 btn btn-primary btn-lg"  onclick="systemOrder('+row.id+','+row.heartbeat+',\'restart\')">重启</button>';
+	            	str +='<button type="button" class="btn1 btn btn-danger btn-lg"  onclick="systemOrder('+row.id+','+row.heartbeat+',\'shutdown\')">关机</button>';
+	            	str +='<button type="button" class="btn1 btn btn-danger btn-lg"  onclick="systemOrder('+row.id+','+row.heartbeat+',\'destroy\')">退出</button>';  
 	            	return str;
 	               }
 	        }]

@@ -18,7 +18,7 @@ function loadsortBtns(){
 		var i=0;
 		
 		$.each(data.rows, function(i,n){
-			str+='<button type="button" class="btn '+color[i]+' btn-lg" onclick="getbtns('+n.id+')">'+n.name+'</button>'; 
+			str+='<div class="btn-group"><a href="javascript:void(0);" onclick="getbtns('+n.id+')" class="buttombtn1 btn '+color[i]+' btn-lg" role="button">'+n.name+'</a></div>';
 		if(i==5){
 			i=0;
 		}else{
@@ -55,7 +55,7 @@ function getbtns(id){
 								return;
 							}   
 					  });
-				      str+='<button type="button" style="width: 180px; height: 80px;  position: absolute; left: '+n.left+'px; top: '+n.top+'px;" class="btn btn-danger btn-lg" onclick="issue('+n.bid+')">'+name+'</button>'; 	 
+				      str+='<button type="button" style="width: 180px; height: 80px;  position: absolute; left: '+n.left+'px; top: '+n.top+'px;" class="btn2 btn btn-danger btn-lg" onclick="issue('+n.bid+')">'+name+'</button>'; 	 
 			 }  
 	 	 });
 		 		$("#buttons").append(str);

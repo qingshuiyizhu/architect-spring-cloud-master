@@ -182,14 +182,13 @@ public void writeToLocal(String destination, InputStream input)
 	}
 	@RequestMapping(value = "/issue" )
 	public String issue(int id) {
-		System.out.print("发送指令成功!" + id);
+		System.out.println("发送指令成功-----------------" + id);
 		// 根据按钮id查找记录
 		Button button = buttonService.get(id);
 		List<Command> contents = new ArrayList<Command>();
 		try {
 			contents = JSONObject.parseArray(button.getContent(), Command.class);
-
-		 
+ 	
 			for (int i = 0; i < contents.size(); i++) {
 				// udp发送数据
 				Command content = contents.get(i);
