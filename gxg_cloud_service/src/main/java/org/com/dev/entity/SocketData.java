@@ -11,6 +11,8 @@ public class SocketData implements Serializable{
 	private String ip;
 	private String mac;
 	private String heart;
+	//客户端主机名
+	private String hostName;
 	//指令类型
 	private Integer orderType;
     private String appPath;
@@ -32,6 +34,14 @@ public class SocketData implements Serializable{
 
 	public void setMac(String mac) {
 		this.mac = mac;
+	}
+
+	public String getHostName() {
+		return hostName;
+	}
+
+	public void setHostName(String hostName) {
+		this.hostName = hostName;
 	}
 
 	public String getHeart() {
@@ -77,8 +87,8 @@ public class SocketData implements Serializable{
 
 	@Override
 	public String toString() {
-		return "SocketData [ip=" + ip + ", mac=" + mac + ", heart=" + heart + ", orderType=" + orderType + ", appPath="
-				+ appPath + ", porgram=" + porgram + "]";
+		return "SocketData [ip=" + ip + ", mac=" + mac + ", heart=" + heart + ", hostName=" + hostName + ", orderType="
+				+ orderType + ", appPath=" + appPath + ", porgram=" + porgram + ", fileTransfer=" + fileTransfer + "]";
 	}
 
 	 

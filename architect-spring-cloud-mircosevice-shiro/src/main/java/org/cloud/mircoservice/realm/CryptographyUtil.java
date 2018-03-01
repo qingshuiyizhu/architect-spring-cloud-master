@@ -28,14 +28,4 @@ public class CryptographyUtil {
 		return new Md5Hash(str, "caonidaye").toString();
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

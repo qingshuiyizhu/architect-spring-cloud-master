@@ -142,8 +142,8 @@ function findcontent(id) {
 								onChange:function(data){
 									var row = $('#plist').datagrid('getSelected');
 								 	var rowIndex = $('#plist').datagrid('getRowIndex',row);//获取行号
-	                            	var thisTarget = $('#plist').datagrid('getEditor', {'index':rowIndex,'field':'mgid'}).target;
-	                            	var value = thisTarget.combobox('getValue');
+								  	var thisTarget = $('#plist').datagrid('getEditor', {'index':rowIndex,'field':'mgname'}).target;
+	                             	var value = thisTarget.combobox('getValue');
 	                             	var target = $('#plist').datagrid('getEditor', {'index':rowIndex,'field':'mid'}).target;
 									target.combobox('clear'); //清除原来的数据
 									var url = 'machineController/getMachineBymgid?mgid='+value;
@@ -227,16 +227,50 @@ function findcontent(id) {
 					}
 
 			] ],
-			// 点击行时触发事件
-			onClickRow:function(index,row){
-				$('#plist').datagrid('beginEdit', index);
+			/*onDblClickCell: function(index,field,value){
+				$(this).datagrid('beginEdit', index);
+				var ed = $(this).datagrid('getEditor', {index:index,field:field});
+				 $(ed.target).focus();
+			},*/
+			 // 点击行时触发事件
+			onDblClickRow:function(rowIndex,rowData){
+				//双击开启编辑行
+                if (editing != undefined) {
+                	$('#plist').datagrid("endEdit", editRow);
+                }
+                if (editing == undefined) {
+                	$('#plist').datagrid("beginEdit", rowIndex);
+                    editing = rowIndex;
+                    var thisTarget = $('#plist').datagrid('getEditor', {'index':editing,'field':'mgid'}).target;
+                	var value = thisTarget.combobox('setValue',rowData.mgid);
+                	 var thisTarget1 = $('#plist').datagrid('getEditor', {'index':editing,'field':'mid'}).target;
+                 	 var value1 = thisTarget1.combobox('setValue',rowData.mid);
+                    
+                    
+                }
+			
+				
+			}, 
+			
+			/*onClickRow:function(index,row){
+			   	$('#plist').datagrid('beginEdit', index);
+			
+			    //$('#plist').datagrid('beginEdit', getRowIndex(row));
+			   	
+			   	
+			   	
+			   	
 			  if(index != editing){
 				    newVal=row.mid;
 					$('#plist').datagrid('endEdit', editing); 
 			 	   	editing = index;
 			  }
-			    
-		 		},
+			
+			  
+			  
+			  
+			  
+		 		},*/
 			toolbar:[
 				{
 					text:'新增程序',
@@ -322,7 +356,10 @@ function findcontent(id) {
 	    	 	}, "json");
 	  
 }
-
+function getRowIndex(target){
+    var tr = $(target).closest('tr.datagrid-row');
+    return parseInt(tr.attr('datagrid-row-index'));
+}
 // 增加数据
 function add_row() {
 	$("#edit_row_id").val("0");

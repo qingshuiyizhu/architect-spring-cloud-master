@@ -36,16 +36,15 @@ html, body {
 
 .buttombtn {
 	width: 50%;
-	line-height: 50px;
-	font-size:45px;
+	line-height: 52px;
+	font-size:47px;
 }
 .buttombtn1 {
- 	line-height: 45px;
-	line-height: 40px;
-	font-size:40px;
+ 	line-height: 47px;
+   	font-size:44px;
 }
 .btn2{
-font-size:40px;
+font-size:43px;
 
 }
 </style>
@@ -59,17 +58,16 @@ font-size:40px;
 	    <div class="btn-group">
 	       <a href="#" class="buttombtn btn btn-warning btn-lg disabled" role="button">指令</a> 
 	   </div>
-	</div> 
+	  </div> 
+	    <hr/> 
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
 			<!-- 按钮组 -->
 			<div class=" btn-group btn-group-justified" id="sortbuttons">
-			 
-			</div>
 		 	</div>
-			
-			<div class="col-md-12">
+		 	</div>
+		 	<div class="col-md-12">
 			<ul id="buttons">
 		 
 		 	</ul>

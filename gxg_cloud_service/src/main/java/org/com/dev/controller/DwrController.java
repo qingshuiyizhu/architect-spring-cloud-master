@@ -1,8 +1,10 @@
 package org.com.dev.controller;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.util.ArrayList;
@@ -17,6 +19,7 @@ import org.com.dev.entity.JsonMsg;
 import org.com.dev.entity.Machine;
 import org.com.dev.entity.Program;
 import org.com.dev.entity.SocketData;
+import org.com.dev.service.AsyncTaskService;
 import org.com.dev.service.ButtonService;
 import org.com.dev.service.FTPService;
 import org.com.dev.service.MachineGroupService;
@@ -158,8 +161,7 @@ public void writeToLocal(String destination, InputStream input)
 	@RequestMapping(value = "/creatDir")
 	public String creatDir(String path, String name) {
 		boolean sign = ftpservice.creatDir(path, name);
-
-		return "0";
+ 	return "0";
 
 	}
  
@@ -167,12 +169,17 @@ public void writeToLocal(String destination, InputStream input)
   	Machine machine = machineService.getByMAC(data.getMac());
 		String info = JSONObject.toJSONString(data);
 		System.out.println("向客户端发送指令：" + info);
-		try {
-			byte[] bytes = info.getBytes();
+	  	try {
+			ByteArrayOutputStream bos = new ByteArrayOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(bos);
+		 	oos.writeObject(data);
+		   	// 得到person对象的byte数组
+			byte[] bytes = bos.toByteArray();
+		//	byte[] bytes = info.getBytes();
 			DatagramPacket dp = new DatagramPacket(bytes, 0, bytes.length, InetAddress.getByName(machine.getIp()),
 					machine.getPort());
 		 
-			//Listener.DS.send(dp);// 发送完毕
+			AsyncTaskService.DS.send(dp);// 发送完毕
 			System.out.println("向客户端发送指令成功");
 		} catch (Exception e) {
 			System.out.println("向客户端发送指令：" + info + "失败");

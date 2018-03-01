@@ -40,8 +40,8 @@ html, body {
 
 .buttombtn {
 	width: 50%;
-	line-height: 50px;
-	font-size:45px;
+	line-height: 52px;
+	font-size:47px;
 }
 .btn1{
 font-size:30px;
@@ -63,8 +63,6 @@ font-size:30px;
    <table id="tb_machines"  ></table> 
 </div>
  	</div> 
-
-
  
 </body>
 </html>

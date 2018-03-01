@@ -72,7 +72,7 @@ public class AsyncTaskService {
 			if (null == machine) {
 				machine = new Machine();
 				machine.setState(0);
-				machine.setName(dp.getAddress().getHostName());
+				machine.setName(socketData.getHostName());
 				machine.setMac(socketData.getMac());
 				machine.setMgid(0);
 				machine.setIp(dp.getAddress().getHostAddress());

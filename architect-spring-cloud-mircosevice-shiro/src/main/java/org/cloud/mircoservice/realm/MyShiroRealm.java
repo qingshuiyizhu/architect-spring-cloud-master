@@ -24,8 +24,6 @@ public class MyShiroRealm extends AuthorizingRealm{
 		//authorizationInfo.setStringPermissions(userService.getPermissions(userName)); 
 		return authorizationInfo;
 	}
-
-
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 		System.out.println("-----------------------doGetAuthenticationInfo");   
