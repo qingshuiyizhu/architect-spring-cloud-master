@@ -18,6 +18,7 @@
   	<module>architect-spring-cloud-mircosevice-user</module>
 	<module>architect-spring-cloud-mircosevice-shiro</module>
   	<module>architect-spring-cloud-mircosevice-serialport</module>
+    <module>architect-spring-cloud-mircosevice-bank</module>
   	<module>eager-answer-system</module>
   	<module>gxg_cloud_service</module>
     </modules>

@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: architect-spring-cloud-mircosevice-shiro
+Implementation-Title: architect-spring-cloud-mircosevice-bank
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: ROOT
 Implementation-Vendor-Id: org.com.itmuch.cloud
